@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-08T09:57:52 CDT" name="Default suite" finished-at="2024-06-08T09:57:52 CDT" duration-ms="696">
+  <suite started-at="2024-06-10T17:21:12 CDT" name="Default suite" finished-at="2024-06-10T17:21:13 CDT" duration-ms="518">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@229f66ed]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.testRunner@229f66ed]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-06-08T09:57:52 CDT" name="Default test" finished-at="2024-06-08T09:57:52 CDT" duration-ms="696">
-      <class name="runner.testRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.testRunner@229f66ed]" started-at="2024-06-08T09:57:52 CDT" name="setUpClass" finished-at="2024-06-08T09:57:52 CDT" duration-ms="415" status="PASS">
+    <test started-at="2024-06-10T17:21:12 CDT" name="Default test" finished-at="2024-06-10T17:21:13 CDT" duration-ms="518">
+      <class name="testRunners.testRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.testRunner@229f66ed]" started-at="2024-06-10T17:21:13 CDT" name="setUpClass" finished-at="2024-06-10T17:21:13 CDT" duration-ms="271" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@66565121]]>
+                <![CDATA[org.testng.TestRunner@6ad59d92]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.testRunner@229f66ed]" started-at="2024-06-08T09:57:52 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-08T09:57:52 CDT" duration-ms="162" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.testRunner@229f66ed]" started-at="2024-06-10T17:21:13 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-10T17:21:13 CDT" duration-ms="151" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Title of your scenario"]]>
+                <![CDATA["Verify user navigates to the main page"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Title of your feature"]]>
+                <![CDATA["Main Page"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.equals(Object)" because "browser" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "browser" is null
+at factory.DriverFactory.initDriver(DriverFactory.java:24)
+at factory.DriverFactory.getDriver(DriverFactory.java:40)
+at appHooks.ApplicationHooks.launchbrowser(ApplicationHooks.java:31)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.testRunner@229f66ed]" started-at="2024-06-08T09:57:52 CDT" name="tearDownClass" finished-at="2024-06-08T09:57:52 CDT" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunners.testRunner@229f66ed]" started-at="2024-06-10T17:21:13 CDT" name="tearDownClass" finished-at="2024-06-10T17:21:13 CDT" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.testRunner -->
+      </class> <!-- testRunners.testRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
